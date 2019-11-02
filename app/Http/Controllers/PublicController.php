@@ -45,6 +45,7 @@ class PublicController extends Controller
         $newFile = date('Y-m-d')."_".uniqid().".".$file->getClientOriginalExtension();
         //保存图片到指定目录
         $res=$file->move($dir,$newFile);
+
         if($res){
             $data = [
                 'code'  => 0,
@@ -72,6 +73,7 @@ class PublicController extends Controller
         return false;
     }
 
+    //省市区表操作
     public static function getProvince(){
         $data=DB::table('area')->where('level',1)->get()->toArray();
         return $data;

@@ -2,24 +2,7 @@
 @extends('home.base')
 
 @section('content')
-<body style="cursor: url({{asset('/home/images/cursor.gif')}}),auto;">
-<header id="container2" style="background: #226039 url({{asset('/home/images/bg-girl.jpg')}})center 0 scroll no-repeat;">
-  <div class="popover left" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
-    <div class="arrow"></div>
-    <div class="popover-inner">
-      <div class="popover-content">
-        <p>哎哟喂！点我干嘛！</p>
-      </div>
-    </div>
-  </div>
-  <div class="popover right" data-easein="cardInRight" data-easeout="cardOutRight" id="pop6">
-    <div class="arrow"></div>
-    <div class="popover-inner">
-      <div class="popover-content">
-        <p>快收藏下面的个人博客空间导航条图片！</p>
-      </div>
-    </div>
-  </div>
+
   @include('home/nav')
 </header>
 <link rel="stylesheet" type="text/css" href="{{asset('/home/css/image.css')}}" />

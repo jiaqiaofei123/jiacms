@@ -29,7 +29,6 @@ class NavController extends Controller
             'count' => $res['total'],
             'data'  => $res['data']
         ];
-//        dd($res,response()->json($data));
         return response()->json($data);
     }
 
@@ -41,7 +40,6 @@ class NavController extends Controller
     public function create()
     {
         $navs = $this->tree(Nav::get()->toArray());
-//        dd($navs);
         return view('admin.nav.create',compact('navs'));
     }
 

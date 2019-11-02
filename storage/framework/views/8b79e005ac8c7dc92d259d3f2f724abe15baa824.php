@@ -1,21 +1,5 @@
 <?php $__env->startSection('content'); ?>
-    <header id="container2" style="background: #226039 url(<?php echo e(asset('home/images/bg-girl.jpg')); ?>) center 0 scroll no-repeat;">
-        <div class="popover left" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
-            <div class="arrow"></div>
-            <div class="popover-inner">
-                <div class="popover-content">
-                    <p>有些烦恼，丢掉了，才有云淡风轻的机会。</p>
-                </div>
-            </div>
-        </div>
-        <div class="popover right" data-easein="cardInRight" data-easeout="cardOutRight" id="pop6">
-            <div class="arrow"></div>
-            <div class="popover-inner">
-                <div class="popover-content">
-                    <p>长大的岁月里，我们从未变化，只是越来越清晰的成为自己。</p>
-                </div>
-            </div>
-        </div>
+
         <?php echo $__env->make('home/nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
     </header>
