@@ -1,23 +1,5 @@
 <?php $__env->startSection('content'); ?>
 
-    <header id="container2"
-            style="background: #226039 url(<?php echo e(asset('/home/images/bg-girl.jpg')); ?>) center 0 scroll no-repeat;">
-        <div class="popover left" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
-            <div class="arrow"></div>
-            <div class="popover-inner">
-                <div class="popover-content">
-                    <p>一个人旅行，不理会繁杂的琐事，自由自在地，去体验一个城市，一段故事，留下一片欢笑。</p>
-                </div>
-            </div>
-        </div>
-        <div class="popover right" data-easein="cardInRight" data-easeout="cardOutRight" id="pop6">
-            <div class="arrow"></div>
-            <div class="popover-inner">
-                <div class="popover-content">
-                    <p>欠自己的旅行，终有一天，要还给自己。</p>
-                </div>
-            </div>
-        </div>
         <?php echo $__env->make('home/nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     </header>
     <style type="text/css">

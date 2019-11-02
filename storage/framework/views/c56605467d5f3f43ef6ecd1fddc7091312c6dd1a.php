@@ -1,22 +1,5 @@
 <?php $__env->startSection('content'); ?>
-    <body style="cursor: url(<?php echo e(asset('/home/images/cursor.gif')); ?>),auto;">
-    <header id="container2" style="background: #226039 url(<?php echo e(asset('/home/images/2.jpg')); ?>) center 0 scroll no-repeat;">
-        <div class="popover left" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
-            <div class="arrow"></div>
-            <div class="popover-inner">
-                <div class="popover-content">
-                    <p>人生至少要有两次冲动，一为奋不顾身的爱情，一为说走就走的旅行。</p>
-                </div>
-            </div>
-        </div>
-        <div class="popover right" data-easein="cardInRight" data-easeout="cardOutRight" id="pop6">
-            <div class="arrow"></div>
-            <div class="popover-inner">
-                <div class="popover-content">
-                    <p>如果有一次说走就走的旅行，那么，请珍惜。因为我们需要行走，让自己成长。</p>
-                </div>
-            </div>
-        </div>
+    
         <?php echo $__env->make('home/nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     </header>
 

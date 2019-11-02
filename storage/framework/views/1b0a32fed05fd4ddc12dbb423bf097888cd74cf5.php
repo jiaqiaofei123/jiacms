@@ -1,3 +1,31 @@
+
+
+<?php $__currentLoopData = $nav; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $val): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <?php if($val['url'] == $_SERVER['REQUEST_URI']): ?>
+<body style="cursor: url(<?php echo e(asset('/home/images/cursor.gif')); ?>),auto;">
+<header id="container2" style="background: #226039 url(<?php echo e($val['image']); ?>) center 0 scroll no-repeat; background-size: 100% 330px;" >
+    <div class="popover left" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <div class="popover-content">
+                <p><?php echo e($val['left_text']); ?></p>
+            </div>
+        </div>
+    </div>
+    <div class="popover right" data-easein="cardInRight" data-easeout="cardOutRight" id="pop6">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <div class="popover-content">
+                <p><?php echo e($val['right_text']); ?></p>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+
+
 <img src="<?php echo e(asset('/home/images/arrow1.png')); ?>" alt="info" class="info-icon info-icon1" data-target="pop7"/> <img src="<?php echo e(asset('/home/images/arrow1.png')); ?>" alt="info" class="info-icon info-icon2" data-target="pop6"/>
 <div class="quotes">
     <div class="text5">时光·记录</div>

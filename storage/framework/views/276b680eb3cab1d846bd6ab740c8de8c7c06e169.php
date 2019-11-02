@@ -1,24 +1,6 @@
 ﻿
 
 <?php $__env->startSection('content'); ?>
-  <body style="cursor: url(<?php echo e(asset('/home/images/cursor.gif')); ?>),auto;">
-  <header id="container2" style="background: #226039 url(<?php echo e(asset('/home/images/2.jpg')); ?>) center 0 scroll no-repeat;">
-  <div class="popover left" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
-    <div class="arrow"></div>
-    <div class="popover-inner">
-      <div class="popover-content">
-        <p>哎哟喂！点我干嘛！</p>
-      </div>
-    </div>
-  </div>
-  <div class="popover right" data-easein="cardInRight" data-easeout="cardOutRight" id="pop6">
-    <div class="arrow"></div>
-    <div class="popover-inner">
-      <div class="popover-content">
-        <p>娃哈哈！好玩吧</p>
-      </div>
-    </div>
-  </div>
 
     <?php echo $__env->make('home/nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 

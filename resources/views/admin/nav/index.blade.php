@@ -12,6 +12,16 @@
         </div>
         <div class="layui-card-body">
             <table id="dataTable" lay-filter="dataTable"></table>
+
+            <script type="text/html" id="image">
+                @{{#  if(d.image){ }}
+                <a href="javascript:void(0);" lay-event="img_big" title="@{{d.image}}"><img src="@{{d.image}}" alt="" width="50" height="28"></a>
+                @{{# }else{ }}
+                <a href="javascript:void(0);" lay-event="img_big" title="{{asset('/images/noimage.jpeg')}}"><img src="{{asset('/images/noimage.jpeg')}}" alt="" width="50" height="28"></a>
+                @{{# }; }}
+                <img alt="" style="display:none;" id="displayImg" src="" height="500" width="500"/>
+            </script>
+
             <script type="text/html" id="options">
                 <div class="layui-btn-group">
                     @can('home.nav')
@@ -31,6 +41,14 @@
 
 @section('script')
     @can('home.nav')
+        <style type="text/css">
+            /*调整图片透明度*/
+            .myskin{
+                background-color:transparent;/*透明（可根据需求自己调整）*/
+                opacity: 0.9;/*透明度*/}
+            .demo-class{border-top:1px solid #E9E7E7}
+        </style>
+
         <script>
             layui.use(['layer','table','form'],function () {
                 var layer = layui.layer;
@@ -48,7 +66,7 @@
                         ,{field: 'name', title: '分类名称'}
                         ,{field: 'url', title: 'URL'}
                         ,{field: 'sort', width: '8%',title: '排序',sort: true}
-                        ,{field: 'updated_at', width: '15%',title: '更新时间'}
+                        ,{field: 'image', title: '封面图片',toolbar:'#image',width:90}
                         ,{field: 'created_at', width: '15%', title: '创建时间'}
                         ,{fixed: 'right', width: 320, align:'center', toolbar: '#options'}
                     ]]
@@ -79,6 +97,25 @@
                             where:{model:"permission",parent_id:data.id},
                             page:{curr:1}
                         })
+                    }
+
+                    //图片放大效果
+                    if (layEvent === 'img_big') {
+                        var url = $(this).attr('title');
+                        $("#displayImg").attr("src", url);
+                        var height = $("#displayImg").height();
+                        var width = $("#displayImg").width();
+                        layer.open({
+                            type: 1,
+                            title: false,
+                            closeBtn: 0,//隐藏关闭按钮
+                            shade: [0.3, '#000'],//黑色背景（0.3代表颜色深度）
+                            shadeClose: true,//点击遮罩关闭大图
+                            area: ['800px', '300px'], //宽高
+                            resize:false,//不可拖拽缩放
+                            skin: 'myskin',//大图背景色定义类
+                            content: "<img height='300px;'width='800px;'alt=" + name + " title=" + name + " src=" + url + ">"
+                        });
                     }
                 });
 

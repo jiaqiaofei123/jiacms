@@ -1,3 +1,31 @@
+
+
+@foreach($nav as $val)
+    @if($val['url'] == $_SERVER['REQUEST_URI'])
+<body style="cursor: url({{asset('/home/images/cursor.gif')}}),auto;">
+<header id="container2" style="background: #226039 url({{$val['image']}}) center 0 scroll no-repeat; background-size: 100% 330px;" >
+    <div class="popover left" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <div class="popover-content">
+                <p>{{$val['left_text']}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="popover right" data-easein="cardInRight" data-easeout="cardOutRight" id="pop6">
+        <div class="arrow"></div>
+        <div class="popover-inner">
+            <div class="popover-content">
+                <p>{{$val['right_text']}}</p>
+            </div>
+        </div>
+    </div>
+    @endif
+    @endforeach
+
+
+
+
 <img src="{{asset('/home/images/arrow1.png')}}" alt="info" class="info-icon info-icon1" data-target="pop7"/> <img src="{{asset('/home/images/arrow1.png')}}" alt="info" class="info-icon info-icon2" data-target="pop6"/>
 <div class="quotes">
     <div class="text5">时光·记录</div>

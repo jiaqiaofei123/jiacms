@@ -2,24 +2,7 @@
 @extends('home.base')
 
 @section('content')
-    <body style="cursor: url({{asset('/home/images/cursor.gif')}}),auto;">
-    <header id="container2" style="background: #226039 url({{asset('/home/images/2.jpg')}})center 0 scroll no-repeat;">
-  <div class="popover left" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
-    <div class="arrow"></div>
-    <div class="popover-inner">
-      <div class="popover-content">
-        <p>趁年轻，趁梦想还在，想去的地方，现在就去。想做的事情，现在就做。</p>
-      </div>
-    </div>
-  </div>
-  <div class="popover right" data-easein="cardInRight" data-easeout="cardOutRight" id="pop6">
-    <div class="arrow"></div>
-    <div class="popover-inner">
-      <div class="popover-content">
-        <p>有些事，有些人，有些风景，一旦入眼入心，即便刹那，也是永恒。</p>
-      </div>
-    </div>
-  </div>
+
   @include('home/nav')
 </header>
 <style type="text/css">
